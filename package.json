@@ -1,0 +1,9 @@
+{
+  "name": "com.firsttry.customextensions",
+  "version": "1.0.0",
+  "displayName": "Custom Extensions",
+  "unity": "2022.1",
+    "dependencies": {
+        "com.unity.nuget.newtonsoft-json": "3.2.1"
+    }
+}
