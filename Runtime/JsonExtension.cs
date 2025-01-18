@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 
 namespace CustomExtensions.Runtime
 {
-    internal static class JsonExtension
+    public static class JsonExtension
     {
         public static string GetJsonPropertyName(this Enum enumValue)
         {
