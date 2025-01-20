@@ -4,3 +4,9 @@
 ## [1.0.1] - 2025-01-18
 ### Fixed
 - Changed access modifier from `internal` to `public`.
+## [1.1.0] - 2025-01-20
+### Feature
+- Added new ConvertToBackingField extenstion.
+### Update
+- README.md.
+- GetJsonPropertyName added xml comment.
