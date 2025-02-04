@@ -15,3 +15,6 @@
 - Create folder string extension.
 ### Update
 - README.md.
+## [1.1.2] - 2025-02-05
+### Fix
+- Moved CreateFolder to Editor assembly.
