@@ -10,3 +10,8 @@
 ### Update
 - README.md.
 - GetJsonPropertyName added xml comment.
+## [1.1.1] - 2025-02-04
+### Feature
+- Create folder string extension.
+### Update
+- README.md.
