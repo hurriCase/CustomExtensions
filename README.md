@@ -22,7 +22,14 @@ string backingField = "MyProperty".ConvertToBackingField();
 // Returns "<MyProperty>k__BackingField"
 ```
 
-3. **Resolve JSON Properties**
+3. **Create Folder Structure**
+```csharp
+// Creates nested folders in your Unity project
+"Assets/Scripts/Features/Combat".CreateFolder();
+// Creates: Assets/Scripts, Assets/Scripts/Features, Assets/Scripts/Features/Combat
+```
+
+4. **Resolve JSON Properties**
 ```csharp
 internal enum ResponseType
 {
@@ -41,6 +48,7 @@ var mime = ResponseType.TextPlain.GetJsonPropertyName();
 - JSON property resolution
 - Exception propagation
 - Editor property access
+- Folder creation utilities
 
 ## Extensions
 
@@ -68,14 +76,28 @@ Features:
 - Task completion monitoring
 
 ### StringExtensions
-Converts property names to backing field format:
+String manipulation and Unity project utilities:
 
 ```csharp
 public static class StringExtensions 
 {
+    // Converts property names to backing field format
     public static string ConvertToBackingField(this string propertyName);
+
+    // Creates folder structure in Unity project
+    public static void CreateFolder(this string path);
 }
+
+// Usage
+"MyProperty".ConvertToBackingField();  // Returns "<MyProperty>k__BackingField"
+"Assets/MyGame/Scripts".CreateFolder(); // Creates folder structure
 ```
+
+Features:
+- Backing field name conversion
+- Nested folder creation
+- Asset database integration
+- Path validation
 
 ### JsonExtension
 Gets JSON property names from enum values:
@@ -98,6 +120,8 @@ public static class JsonExtension
    - Validate property names
    - Handle null cases
    - Use in editor scripts
+   - Use forward slashes (/) for folder paths
+   - Ensure valid folder names
 
 3. JSON Properties:
    - Always define JsonProperty attributes
@@ -116,7 +140,13 @@ public static class JsonExtension
    - Check for null values
    - Use correct casing
 
-3. **JSON Resolution**
+3. **Folder Creation**
+   - Use forward slashes (/) as path separators
+   - Ensure valid folder names
+   - Handle existing folders gracefully
+   - Refresh AssetDatabase after creation
+
+4. **JSON Resolution**
    - Missing attributes default to enum names
    - Handle null enum values
    - Consider case sensitivity
@@ -133,6 +163,12 @@ public static class JsonExtension
 - Uses C# backing field convention
 - Handles serialization properly
 - Compatible with Unity inspector
+
+### Folder Creation Process
+1. Split path into segments
+2. Create folders recursively
+3. Validate each folder
+4. Refresh asset database
 
 ## Usage Examples
 
@@ -169,6 +205,21 @@ public class CustomEditor : Editor
         var prop = serializedObject.FindProperty(
             "myProperty".ConvertToBackingField()
         );
+    }
+}
+```
+
+### Project Folder Structure
+```csharp
+public class ProjectSetup
+{
+    [MenuItem("Project/Setup Folders")]
+    static void SetupProjectFolders()
+    {
+        "Assets/Scripts/Core".CreateFolder();
+        "Assets/Scripts/Features".CreateFolder();
+        "Assets/Resources/Prefabs".CreateFolder();
+        "Assets/Resources/Materials".CreateFolder();
     }
 }
 ```
