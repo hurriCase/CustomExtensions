@@ -12,6 +12,10 @@ namespace CustomExtensions.Runtime
         public static string ConvertToBackingField(this string propertyName)
             => $"<{propertyName}>k__BackingField";
 
+        /// <summary>
+        /// Creates a folder structure in the Unity project based on the provided path.
+        /// </summary>
+        /// <param name="path">The path where the folders should be created, using forward slashes (/) as separators.</param>
         public static void CreateFolder(this string path)
         {
             var folders = path.Split('/');
