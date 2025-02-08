@@ -23,3 +23,6 @@
 - Moved ConvertToBackingField to editor extensions.
 ### Feature
 - ReflectionExtensionsEditor extensions to grab field.
+## [1.2.1] - 2025-02-08
+### Fix
+- Wrong access modifer in ReflectionExtensionsEditor.
