@@ -18,3 +18,8 @@
 ## [1.1.2] - 2025-02-05
 ### Fix
 - Moved CreateFolder to Editor assembly.
+## [1.2.0] - 2025-02-08
+### Refactor
+- Moved ConvertToBackingField to editor extensions.
+### Feature
+- ReflectionExtensionsEditor extensions to grab field.
