@@ -4,7 +4,7 @@ using System.Reflection;
 
 namespace CustomExtensions.Editor
 {
-    internal static class ReflectionExtensionsEditor
+    public static class ReflectionExtensionsEditor
     {
         public static string GetFieldName<TClass, TField>(this TClass _,
             BindingFlags bindingFlags = BindingFlags.NonPublic | BindingFlags.Instance)
