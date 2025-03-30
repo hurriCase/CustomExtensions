@@ -26,3 +26,6 @@
 ## [1.2.1] - 2025-02-08
 ### Fix
 - Wrong access modifer in ReflectionExtensionsEditor.
+## [1.2.2] - 2025-03-30
+### Fix
+- CanvasExtensions was added.
