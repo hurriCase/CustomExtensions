@@ -29,3 +29,6 @@
 ## [1.2.2] - 2025-03-30
 ### Fix
 - CanvasExtensions was added.
+## [1.2.3] - 2025-04-02
+### Feature
+- SerializedPropertyExtensions.

@@ -1,6 +1,6 @@
 {
   "name": "com.firsttry.customextensions",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "displayName": "Custom Extensions",
   "unity": "2022.1",
     "dependencies": {
